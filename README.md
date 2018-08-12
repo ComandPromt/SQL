@@ -69,3 +69,9 @@ END;
 
 exec INSERTAR_COCHE('SEAT','LEON','G',1600,15000);
 ~~~
+
+# Borrar los 5 ultimos registros
+- Cambia 5 por el numero que quieras
+~~~sql
+DELETE FROM table WHERE id=3 ORDER BY id DESC LIMIT 5;
+~~~
