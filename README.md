@@ -70,8 +70,22 @@ END;
 exec INSERTAR_COCHE('SEAT','LEON','G',1600,15000);
 ~~~
 
-# Borrar los 5 ultimos registros
+# Borrar los 5 ultimos registros (MySQL)
 - Cambia 5 por el numero que quieras
 ~~~sql
 DELETE FROM table WHERE id=3 ORDER BY id DESC LIMIT 5;
 ~~~
+
+# Consulta duplicados (MySQL)
+~~~sql
+SELECT name, COUNT(*) Total
+FROM table
+GROUP BY name
+HAVING COUNT(*) > 1;
+~~~
+
+# Desbloquear al usuario SYSTEM
+~~~sql
+ALTER USER SYSTEM ACCOUNT UNLOCK;
+~~~
+
