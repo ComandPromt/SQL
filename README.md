@@ -1,6 +1,8 @@
 # Cambiar contraseña root MySQL
-~~~sql
+~~~bash
 sudo mysql -u root
+~~~
+~~~sql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY
 'contraseña'; 
 ~~~
