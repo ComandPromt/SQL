@@ -1,3 +1,10 @@
+# Cambiar contraseña root MySQL
+~~~sql
+sudo mysql -u root
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY
+'contraseña'; 
+~~~
+
 # Precidimiento para recorrer una tabla
 
 ~~~sql
