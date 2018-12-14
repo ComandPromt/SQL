@@ -1,0 +1,7 @@
+create or replace function compruebaDNI(numDni VARCHAR2) RETURN VARCHAR2 IS
+  numero NUMBER:=23;
+  resultado VARCHAR2(50);
+BEGIN
+   resultado := numDni||SUBSTR('TRWAGMYFPDXBNJZSQVHLCKET',MOD(numDni,numero)+1,1);
+   RETURN resultado;
+END;

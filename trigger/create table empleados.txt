@@ -1,0 +1,11 @@
+CREATE TABLE empleados
+(
+   dni            CHAR (9) PRIMARY KEY,
+   nomemp         VARCHAR2 (50),
+   jefe           CHAR (9),
+   departamento   INTEGER,
+   salario        NUMBER (9, 2) DEFAULT 1000 ,
+   usuario        VARCHAR2 (50),
+   fecha          DATE,
+   FOREIGN KEY (jefe) REFERENCES empleados (dni)
+);
