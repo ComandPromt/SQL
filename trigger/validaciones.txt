@@ -1,0 +1,14 @@
+CREATE OR REPLACE FUNCTION validaciones (nombre VARCHAR2,salario NUMBER) RETURN VARCHAR2 AS 
+  texto VARCHAR2(50):='';
+BEGIN
+  IF nombre IS NULL THEN
+	  texto := 'nombre no puede ser NULL';
+  END IF;
+  IF salario IS NULL THEN
+	  texto := nombre || ' no puede tener un salario NULL';
+  END IF;
+  IF salario < 0 THEN
+	  texto := nombre || ' no puede tener un salario negativo';
+  END IF;
+  RETURN texto;
+END;
